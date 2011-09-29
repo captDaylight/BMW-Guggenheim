@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="lecturetitle">{{lecture.title}}</div>
+<div class="lecturecontent">
+	
+	<form action="/lecture/{{lecture.id}}/add" method="post">
+		{% csrf_token %}
+		<input type="text" name="word" id="word">
+		<button type="submit" value="ADD" class="submit">ADD</button>
+	</form>
+	
+	<div class="words">
+	{% for word in lecture.post_set.all %}
+		<div class="word">
+			<a href="/lecture/{{lecture.id}}/increment/{{word.id}}/">{{word.word}} <b>x {{word.count}}</b></a>
+		</div>
+	{% endfor%}
+	</div>
+</div>
+
+{% endblock %}

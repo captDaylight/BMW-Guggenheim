@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for lecture in lecture_listing %}
+	<div class="tolecture">
+		<a href="/lecture/{{lecture.id}}/">{{lecture.title}}</a>
+	</div>
+{% endfor %}
+
+{% endblock %}
