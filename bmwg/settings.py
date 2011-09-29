@@ -103,7 +103,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'bmwg.urls'
 
 TEMPLATE_DIRS = (
-    "../bmwg/templates/"
+    "../bmwg/bmwg/templates/"
 )
 
 INSTALLED_APPS = (
