@@ -1,5 +1,5 @@
 from django.conf.urls.defaults import *
-from bmw.views import *
+from bmwg.views import *
 from django.conf import settings
 
 from django.contrib import admin
