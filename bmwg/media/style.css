@@ -1,0 +1,82 @@
+body{
+	background: #d5d5d5 url("http://www.paulchristophe.com/pluses.png");
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Arvo', serif;
+}
+
+a{
+	text-decoration:none;
+}
+
+form{
+	margin-bottom: 20px;
+}
+
+.titlelink{
+	background: #009aff;
+	font-size: 50px;
+	padding: 5px;
+	padding-left: 10px;
+}
+
+.lecturetitle{
+	background: #28b8ff;
+	font-size: 35px;
+	padding: 5px;
+	padding-left: 10px;
+	margin: 0px;
+	color:white;
+}
+
+.titlelink a{
+	color: white;
+}
+
+.tolecture{
+	font-size: 30px;
+	margin: 5px;
+	background-color: white;
+	padding: 5px;
+}
+
+.tolecture a{
+	color: black;
+}
+
+.lecturecontent{
+	margin: 5px;
+	padding: 5px;
+}
+
+.word{
+	float: left;
+	background: white; 
+	margin-bottom: 10px;
+	margin-right: 10px;
+	padding: 5px;
+	font-size: 20px;
+}
+.word a{
+	color:black;
+}
+
+
+#word{
+	width: 98%;
+	height: 50px;
+	margin-bottom: 5px;
+	font-size: 35px;
+	font-family: 'Arvo', serif;
+	margin-top: 10px;
+}
+.submit{
+	background-color: #ff9b00;
+	padding: 10px;
+	font-weight: bold;
+	font-size: 30px;
+	border: none;
+	color: white;
+	font-family: 'Arvo', serif;
+	margin-bottom: 5px;
+}
