@@ -103,7 +103,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'bmwg.urls'
 
 TEMPLATE_DIRS = (
-    "../bmwg/bmwg/templates/"
+	os.path.join(os.path.dirname(__file__), "templates"),
 )
 
 INSTALLED_APPS = (
