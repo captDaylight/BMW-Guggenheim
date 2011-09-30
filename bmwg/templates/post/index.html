@@ -4,7 +4,7 @@
 
 {% for lecture in lecture_listing %}
 	<div class="tolecture">
-		<a href="/lecture/{{lecture.id}}/">{{lecture.title}}</a>
+		<a href="/lecture/{{lecture.id}}/">{{lecture.title}} <b>x {{lecture.post_set.count}}</b></a>
 	</div>
 {% endfor %}
 

@@ -9,5 +9,8 @@ urlpatterns = patterns('',
 	(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT }),
 	(r'^lecture/', include('post.urls')),
 	(r'^$', landing),
+	(r'^get/$', get),
+	#do I need to take out the last '/' ??
+	(r'^get/(?P<last_update>\d+)/$', get),
 	url(r'^admin/', include(admin.site.urls)),
 )
