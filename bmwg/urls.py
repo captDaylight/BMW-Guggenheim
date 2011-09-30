@@ -11,6 +11,6 @@ urlpatterns = patterns('',
 	(r'^$', landing),
 	(r'^get/$', get),
 	#do I need to take out the last '/' ??
-	(r'^get/(?P<last_update>\d+)/$', get),
+	(r'^get/(?P<last_update>[-.:\w]+)/$', get),
 	url(r'^admin/', include(admin.site.urls)),
 )

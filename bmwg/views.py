@@ -17,7 +17,8 @@ def get(request, last_update = None):
 	print timestamp
 	if last_update:
 		last_update = datetime.fromtimestamp(float(last_update))
-		lecs = Lecture.objects.all().filter(last_modified__gt=last_update)
+		lecs = Lecture.objects.all().filter(created_at__gt=last_update)
+		
 		lectures = format(lecs)
 	else:
 		lectures = format(Lecture.objects.all())
