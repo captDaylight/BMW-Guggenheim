@@ -11,6 +11,6 @@ class Post(models.Model):
 	word = models.CharField(max_length = 100)
 	count = models.IntegerField()
 	created_at = models.DateTimeField(auto_now_add = True)
-	#last_modified = models.DateTimeField(auto_now = True)
+	last_modified = models.DateTimeField(auto_now = True)
 	def __unicode__(self):
 		return self.word
