@@ -14,6 +14,7 @@ def landing(request):
 
 def get(request, last_update = None):	
 	timestamp = time.time() 
+	#if I receive a timestamp
 	if last_update:
 		last_update = datetime.fromtimestamp(float(last_update))
 		lecs = Lecture.objects.all()#.filter(last_modified__gt=last_update)
@@ -22,10 +23,9 @@ def get(request, last_update = None):
 		for l in lecs:
 			for p in l.post_set.all().filter(last_modified__gt=last_update):
 				lecObjs.append(l)
-		print "here in the if"
 		lectures = format(lecObjs, True, last_update)
+	#if I don't receive a timestamp
 	else:
-		print "here in the else"
 		lectures = format(Lecture.objects.all(), False)
 	updates = {'timestamp': str(timestamp), 'lectures': lectures}
 	return HttpResponse(json.dumps(updates), mimetype="application/json")
@@ -34,7 +34,6 @@ def get(request, last_update = None):
 
 #Put the objects in the correct format for JSON
 def format(objs, isFormat, last_update = None):
-	print "here are the objs: "
 	ls = []
 	for l in objs:
 		posts = []
